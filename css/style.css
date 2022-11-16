@@ -62,7 +62,6 @@ nav ul li a:hover {
     padding-bottom: 1em;
     padding-top: 0.5em;  
     width: 11.5em;
-    margin: 0 0.5rem;
     visibility: hidden;
     position: absolute;
     top: 5em;
@@ -70,21 +69,21 @@ nav ul li a:hover {
     background: #253a5c;
     border-radius: 9px;
     /*border: 1px solid rgb(253, 0, 219);*/
+    /*transition: visibility 0.3s linear, opacity 0.3s linear;*/
+    margin: 20px 0 0 0;
+    _margin: 0; /*IE6 only*/
     opacity: 0;
-    transition: visibility 0.3s linear, opacity 0.3s linear;
-    animation: zoomOut;
-    animation-duration: 0.4s;
+    visibility: hidden;
+    position: absolute;  
+    transition: all .2s ease-in-out;  
 }
 
 .submenu1:hover > .submenu2 {
     /*nav.menu ul li ul:hover*/
-    visibility: visible;
     opacity: 1;
-    animation: zoomIn;
-    animation-duration: 0.1s;
-}
-
- 
+    visibility: visible;
+    margin: 0;
+} 
 
 nav.menu ul li ul li {
     clear: both;
@@ -111,11 +110,10 @@ nav.menu ul li ul li a {
 
 .image_ini {
     border: 1px solid black;
-    line-height: 20em;
+    height: 400px;
     display: flex;
     padding: 1%;
     padding-top: 2%;
-    border: 1px solid black;
 }
 
 .banner {
@@ -130,9 +128,4 @@ nav.menu ul li ul li a {
 
 .imagen_portada .fotos  {
     display:block;
-    max-width:100%;
-    height:auto;
-    overflow:hidden;
 }
-
-
