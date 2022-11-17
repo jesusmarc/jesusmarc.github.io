@@ -121,11 +121,23 @@ nav.menu ul li ul li a {
 .banner {
     border: 1px solid red;
     width: 50%;
+    
 }
+
+.oculto {
+    width: 0;
+    height: 0;
+    border-top: 26.5em solid #fff;
+    border-right: 25px solid transparent;
+    position: absolute;
+    z-index: 1;
+}
+
 
 .imagen_portada {
     border: 1px solid orange;
     width: 50%;
+    position: relative;
 }
 
 .imagen_portada .fotos  {
@@ -147,8 +159,6 @@ nav.menu ul li ul li a {
     position: relative;
     display: flex;
     justify-content: flex-start;
-    /*border-radius: 13px;*/
-    
 }
 
 h1{
@@ -160,7 +170,6 @@ h1{
     /* min-width: 400%; */
     display: flex;
     transition: all ease .5s;
-    
 }
 
 .carousel-item{
@@ -170,6 +179,7 @@ h1{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 
 .carousel-item h1{
