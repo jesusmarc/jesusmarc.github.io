@@ -3,99 +3,215 @@
 <head>
 	<title>El primer documento HTML</title>
 	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/media.css" media="screen">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="/css/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
 	<!--<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">-->
+    
 </head>
 
 <body>
 
-    <!-- NAV (MENU) -->
-    <div class="contenedor">
-        <nav class="menu">
-            <img class="logo" src="/img/logo.png">
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Sectores de Actividad</a></li>
-                <li class="submenu1"><a href="#">Servicios &dtrif;</a>
-                    <ul class="submenu2" id="animate__zoomIn animate__zoomOut">
+    <content class="contenedor" >
+        <header>
+            <a href="#" class="logoo"><img class="logo" alt="logo" src="/img/logo.png" style="width: 80px; height: 80px;"></a>
+            <ul class="submenu">
+                <li><a href="#"><strong>Inicio</strong></a></li>
+                <li><a href="#"><strong>Sectores de Actividad</strong></a></li>
+                <li class="submenu1"><a href="#"><strong>Servicios &dtrif;</strong></a>
+                    <ul class="submenu2">
                         <li><a href="#">Centro de competencias</a></li>
                         <li><a href="#">Casos de uso</a></li>
                         <li><a href="#">Experiencias</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="#">About</a></li> 
+                <li><a href="#"><strong>Contacto</strong></a></li>
+                <li><a href="#"><strong>About</strong></a></li>
             </ul>
-        </nav>
+            <div id="menuArea">
+                <input type="checkbox" id="menuToggle">
+            
+                <label for="menuToggle" class="menuOpen">
+                    <span class="open"></span>
+                </label>
+            
+                <div class="menus menuEffects">
+                    <label for="menuToggle"></label>
+                    <div class="menuContent">
+                        <ul>
+                            <li><a href="#">MENU 1</a></li>
+                            <li><a href="#">MENU 2</a></li>
+                            <li><a href="#">MENU 3</a></li>
+                            <li><a href="#">MENU 4</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="bannerr"></div>
+        <script>
+            window.addEventListener("scroll", function(){
+                var header = document.querySelector("header");
+                header.classList.toggle("sticky", window.scrollY > 0);
+            })
+        </script>
 
-        <!-- CABECERA -->
+    <!-- CABECERA -->
         
-       <div class="image_ini">
+       <content class="image_ini">
             <div class="banner">
-                <h1>BANNER</h1>
-            </div>
-            <div class="imagen_portada">
-                <div class="oculto">
-                    <h1></h1>
-                </div>
-                <!--<img class="carousel-item" src="/img/img.jpg" style="width: 100%; height: 100%">-->
-                <div class="carousel">
-                    <div class="carousel-inner">
-                        <img class="carousel-item" src="/img/img.jpg" class="carousel-item">
-                        <img class="carousel-item" src="/img/img2.jpg" class="carousel-item">
-                        <img class="carousel-item" src="/img/img3.jpg" class="carousel-item">
+                <div class="contenedor_banner">
+                    <div class="recuadro">
+                        <h1>
+                            <span style="color: #95dce0">Ciberseguridad</span> de infraestructuras críticas y sistemas de información sectoriales                        
+                        </h1>
                     </div>
-                    <div class="carousel-controls">
-                        <span class="prev"></span>
-                        <span class="next"></span>
+                    <div class="titulo">
+                        <p>Nuestros dominios de actividad:<br>
+                        <span class="auto-type"></span></p>
+                        <script>
+                        var typed = new Typed(".auto-type", {
+                            strings: ["Defensa y espacio", "Educación", "Industria", "Empresa y sector privado"],
+                            typeSpeed: 40,
+                            backSpeed: 100,
+                            loop: true
+                        })
+                        </script>
                     </div>
-                    <div class="carousel-indicators"></div>
+                    <div class="boton">
+                        <a class="btn" href="#"><strong>Descubra nuestras ofertas</strong>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
+            <slider class="imagen_portada">
+                <div class="oculto" id="oculto">
+                </div>
+                <slider arrows="false" selec="true" autoplay="4">
+                    <content><img src="/img/img.jpg" alt="img" style="width: 100%; height: 100%;"></content>
+                    <content><img src="/img/img2.jpg" alt="img2" style="width: 100%; height: 100%;"></content>
+                    <content><img src="/img/img3.jpg" alt="img3" style="width: 100%; height: 100%;"></content>
+                </slider>
+            </slider>
+        </content>
 
+    <!-- CUERPO -->
+        
         <div class="contenido">
             <div class="fila1">
-                <div class="contenido_1">
-                    
-                    <h1>Hola</h1>
+                <div class="container">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="icon fa fa-space-shuttle fa-4x" style="color: #95dce0;"></i>
+                        </div>
+                        <h4 class="font-weight-bold">Defensa y espacio</h4>
+                        <div class="descripcion">
+                            <p>
+                                Nuestro conocimiento de este tipo de misiones nos permite responder a necesidades muy precisas del sector sobre la homologación de sistemas de defensa HSEM, análisis de riesgos de segmento suelo o evaluaciones técnicas de ciberseguridad EGNOS, y GNSS.
+                            </p>
+                        </div>
+                    </a>
                 </div>
-
-                <div class="contenido_1">
-                    <h1>Hola</h1>
+                <div class="container">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="icon fa fa-plane fa-4x" style="color: #95dce0;"></i>
+                        </div>
+                        <h4 class="font-weight-bold">Transporte y movilidad aérea</h4>
+                        <div class="descripcion">
+                            <p>
+                                Security by Design, la evaluación de sistemas críticos y la seguridad de los componentes de las aeronaves o de los cajeros automáticos son las actividades recurrentes de nuestro Centro de Competencias.
+                            </p>
+                        </div>
+                    </a>
                 </div>
-
-                <div class="contenido_1">
-                    <h1>Hola</h1>
+                <div class="container">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="icon fa fa-bank fa-4x" style="color: #95dce0;"></i>
+                        </div>
+                        <h4 class="font-weight-bold">ePayment, banca y seguros</h4>
+                        <div class="descripcion">
+                            <p>
+                                Como laboratorio certificado por Paycert, apoyamos a los actores del sector en su cumplimiento de la ciberseguridad en los SI bancarios y financieros. SCASSI es un laboratorio certificado por Paycert para certificar los sistemas de pago electrónico y luchar contra el fraude masivo a través de los medios de pago con tarjeta bancaria.
+                            </p>
+                        </div>
+                    </a>
                 </div>
             </div>
 
             <div class="fila2">
-                <div class="contenido_1">
-                    <h1>Hola</h1>
+                <div class="container">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="icon fa fa-heartbeat fa-4x" style="color: #95dce0;"></i>
+                        </div>
+                        <h4 class="font-weight-bold">Salud</h4>
+                        <div class="descripcion">
+                            <p>
+                                Security by Design, la evaluación de sistemas críticos y la seguridad de los componentes de las aeronaves o de los cajeros automáticos son las actividades recurrentes de nuestro Centro de Competencias.
+                            </p>
+                        </div>
+                    </a>
                 </div>
-
-                <div class="contenido_1">
-                    <h1>Hola</h1>
+                <div class="container">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="icon fa fa-car fa-4x" style="color: #95dce0;"></i>
+                        </div>
+                        <h4 class="font-weight-bold">Automotive</h4>
+                        <div class="descripcion">
+                            <p>
+                                Security by Design, la evaluación de sistemas críticos y la seguridad de los componentes de las aeronaves o de los cajeros automáticos son las actividades recurrentes de nuestro Centro de Competencias.
+                            </p>
+                        </div>
+                    </a>
                 </div>
-
-                <div class="contenido_1">
-                    <h1>Hola</h1>
+                <div class="container">
+                    <a href="#">
+                        <div class="icon">
+                            <i class="icon fa fa-industry fa-4x" style="color: #95dce0;"></i>
+                        </div>
+                        <h4 class="font-weight-bold">Industria</h4>
+                        <div class="descripcion">
+                            <p>
+                                Security by Design, la evaluación de sistemas críticos y la seguridad de los componentes de las aeronaves o de los cajeros automáticos son las actividades recurrentes de nuestro Centro de Competencias.
+                            </p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
-    
-    
-
-    <script src="/js/script.js"></script>
-     
-
-    <!-- CUERPO -->
+    </content>
 
     <!-- FOOTER -->
-    
+
+    <footer>
+        <h2 style="color: #fff;">© 2022 MJ Computing</h2>
+        <div class="botones">
+            <div class="moon">
+                <input type="checkbox" id="theme-toggle" onclick="cambiarModo()">
+                <label for="theme-toggle"></label>
+            </div>
+            <div id="topBtn"><p><img src="/img/up.png" alt="up" style="position: absolute; top: 78%; left: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px;"></p></div>
+        </div>   
+    </footer>
+
+    <script> 
+        function cambiarModo() { 
+          var cuerpoweb = document.body; 
+          cuerpoweb.classList.toggle("claro");
+          $('.oculto').toggleClass('oculto2');
+          //var oculto = document.getElementById('oculto').style.borderBlockColor = ("#949494");
+        }
+    </script>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/script2.js"></script>
 </body>
 
 </html>

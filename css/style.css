@@ -3,52 +3,119 @@
     padding: 0;
 }
 
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #050d1a;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
 /* NAV (MENU) */
 
-.menu {
-    background-color: #050d1a;
-    display: flex;  /* Para alinear todos los elementos del menu */
-    height: 80.5px;
-}
-
-nav ul {
-    margin-right: 10%;
-    margin-left: 5%;
-    width: 70%;
-    text-align: right;
-    /*border: 1px solid peru;*/
-    letter-spacing: -10px;
+.contenedor {
+    margin-bottom: 10%;
     
 }
 
-nav ul li {
-    display: inline-block;
-    list-style-type: none;
-    /*border: 1px solid green;*/
-    word-spacing: normal;
-    letter-spacing: normal;
-    white-space: normal;
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    transition: 0.4s;
+    padding: 20px 100px;
+    z-index: 100000;
+    /*border: 1px solid reD;*/
 }
 
-nav ul li a {
-    color: #95dce0;
-    display: block;
-    line-height: 2.08em;
-    padding: 1.2em 1em;
+header.sticky {
+    padding: 0px 100px;
+    background-color: #fff;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+header.sticky ul li {
+    padding-top: 30px;
+}
+
+header .logoo {
+    position: relative;
+    font-weight: 700;
+    color: #fff;
     text-decoration: none;
-    font-family: -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
-    font-size: 18px;
-    /*border: 1px solid yellow;*/
-    
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.4s;
+    justify-content: left;
+    align-items: left;
 }
 
-nav ul li a:hover {
-    color: #959ce0;
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    /*bordeR: 1px solid yellow;*/
+    width: 85%;
+
 }
 
-.logo {
-    margin-left: 5%;
+header ul li {
+    position: relative;
+    list-style: none;
+    padding-top: 30px;
+    cursor: pointer;
 }
+
+header ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    font-family: 'Arial';
+    transition: all .2s ease-in-out;
+}
+
+header ul li:hover > a {
+    color: #95dce0;
+}
+
+header ul li ul a {
+    letter-spacing: 0px;
+    margin: 0;
+}
+header.sticky ul li ul li,
+header ul li ul li {
+    margin-bottom: 8px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+header.sticky .submenu li a {
+    color: #000;
+}
+
+header.sticky ul li ul {
+    background: #fff;
+}
+
+header.sticky ul li a:hover{
+    color: #95dce0;
+}
+
 
 /* ESTILOS DROPDOWN (SUBMENU) MENU */
 
@@ -60,12 +127,13 @@ nav ul li a:hover {
     padding-right: 1.5em;
     padding-left: 1.5em;
     padding-bottom: 1em;
-    padding-top: 0.5em;  
+    padding-top: 1em;  
     width: 11.5em;
+    height: 5em;
     visibility: hidden;
     position: absolute;
     top: 5em;
-    left: -3.7em;
+    left: -3.3em;
     background: #253a5c;
     border-radius: 9px;
     /*border: 1px solid rgb(253, 0, 219);*/
@@ -73,10 +141,9 @@ nav ul li a:hover {
     margin: 20px 0 0 0;
     _margin: 0; /*IE6 only*/
     opacity: 0;
-    visibility: hidden;
-    position: absolute;  
     transition: all .2s ease-in-out;
     z-index: 1;
+    display: table-column;
 }
 
 .submenu1:hover > .submenu2 {
@@ -85,33 +152,13 @@ nav ul li a:hover {
     visibility: visible;
     margin: 0;
     z-index: 1;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 } 
-
-nav.menu ul li ul li {
-    clear: both;
-    width: 100%;
-    text-align: left;
-    border-style: none;
-    list-style-type: none;
-    /*border: 1px solid reD;*/
-}
-
-nav.menu ul li ul li a {
-    /*border: 1px solid green;*/
-    padding: 0;
-    font-size: 15px;
-}
-
-/* EFECTOS PARA LOS ENLACES DEL MENÚ */
-/*https://littlesnippets.net/blog/some-css-menu-inspiration-using-animated-lines*/
-
-/* EFECTOS CAROUSEL */
-/*https://codepen.io/studiojvla/pen/qVbQqW*/
 
 /* CABECERA */
 
 .image_ini {
-    border: 1px solid black;
+    border-bottom: 1px solid rgba(163, 162, 162, 0.671);
     height: 430px;
     display: flex;
     padding: 1%;
@@ -119,23 +166,75 @@ nav.menu ul li ul li a {
 }
 
 .banner {
-    border: 1px solid red;
-    width: 50%;
-    
+    width: 52%;
+}
+
+.recuadro {
+    width: 70%;
+    height: auto;
+    margin-left: 17%;
+    margin-top: 9%;
+    word-wrap: word-break;
+}
+
+.recuadro h1 {
+    font-size: 2.6875rem;
+    font-weight: 400;
+    line-height: 1;
+    color: #fff;
+    font-family: Arial;
+}
+
+.titulo {
+    color: #fff;
+    font-size: 1.8em;
+    width: 70%;
+    height: auto;
+    margin-left: 17%;
+    margin-top: 2%;
+    word-wrap: word-break;
+    animation: 8s anim-lineUp ease-out;
+    font-family: sans-serif;
+}
+
+.titulo .auto-type {
+    color: #95dce0;
+    font-size: 0.9em;
+}
+
+.boton {
+    width: 70%;
+    margin-top: 3.5%;
+    margin-left: 17%;
+    word-wrap: word-break;
+}
+
+.btn {
+    background-color: #95dce0;
+    text-decoration: none;
+    color: #fff;
+    padding: 1.8%;
+    border-radius: 7px;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .oculto {
     width: 0;
     height: 0;
-    border-top: 26.5em solid #fff;
+    border-top: 26.95em solid #050d1a;
     border-right: 25px solid transparent;
     position: absolute;
     z-index: 1;
+    transition: all 0.3s ease-in-out;
 }
 
 
 .imagen_portada {
-    border: 1px solid orange;
+    /*border: 1px solid orange;*/
     width: 50%;
     position: relative;
 }
@@ -144,149 +243,478 @@ nav.menu ul li ul li a {
     display:block;
 }
 
-
-
-
-
 /* CAROUSEL IMÁGENES */
 
-.carousel{
-    height: 100%;
-    width: 100vw;
-    /*margin-bottom: 40px;*/
-    max-width: 100%;
-    overflow-x: hidden;
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
+/* Esconde el contenido hasta que se ejecute el JS */
+
+slider > content { 
+    display:none
 }
 
-h1{
-    color: #333
+/* Contenedor general */
+
+slider{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
 }
 
-.carousel-inner{
-    height: 100%;
-    /* min-width: 400%; */
-    display: flex;
-    transition: all ease .5s;
+slider2 {
+  border: 1px solid #949494;
 }
 
-.carousel-item{
-    flex: 1;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
+/* Contenedor de contenido */
+
+slider .contents{
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  transition: all .5s ease;
 }
 
-.carousel-item h1{
-    opacity: .5;
+slider content{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  display: block;
+  transform: translate(100%, 0);
 }
 
-.carousel-controls .prev{
-    display: inline-block;
-    height: 32px;
-    width: 32px;
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-image: url('prev.svg');
-    background-position: center;
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    opacity: .5;
+slider content:nth-of-type(1) { 
+    transform: translate(0%, 0);
 }
 
-.carousel-controls .next{
-    display: inline-block;
-    height: 32px;
-    width: 32px;
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-image: url('next.svg');
-    background-position: center;
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    opacity: .5;
+/* Selectores */
+slider .Selectores {
+  padding: 15px;
+  position: absolute;
+  bottom: 1em;
+  gap: 10px;
+  display: flex;
+  justify-content: space-between;
 }
+slider .Selectores > div {
+  background-color: #FFF;
+  height: 10px;
+  width: 10px;
+  display: block;
+  border-radius: 5px;
+  cursor: pointer;
+}
+slider .Selectores > div.Activo {background-color: #95dce0;}
 
-.prev:hover, .next:hover{
-    opacity: 1;
-}
-
-.carousel-indicators{
-    position: absolute;
-    bottom: 12px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-}
-
-.carousel-indicators span{
-    display: inline-block;
-    background-color: white;
-    width: 30px;
-    height: 4px;
-    border-radius: 2px;
-    opacity: .5;
-    cursor: pointer;
-    margin: 3px;
-}
-
-.carousel-indicators span.active{
-    opacity: 1;
-}
-
-footer{
-    font-size: 13px;
-    color: #333;
-}
 
 /* CONTENIDO */
 
 .contenido {
-    background-color: green;
+    /*background-color: purple;*/
     height: 90%;
     margin-top: 1%;
-    padding: 3%;
+    padding: 2%;
     position: relative;
 }
 
 .fila1 {
-    background-color: rgb(128, 105, 0);
+    /*background-color: blue;*/
     height: 50%;
-    text-align: center;
+    text-align: justify;
     display: flex;
-    padding: 3%;
-    justify-content: center;
-    align-items: center;
-
+    padding: 1%;
 }
 
 .fila2 {
-    background-color: rgb(28, 0, 128);
+    /*background-color: green;*/
     height: 50%;
-    text-align: center;
+    text-align: justify;
     display: flex;
-    padding: 3%;
+    padding: 1%;
+}
+
+.fila1 .container {
+    background-color: #fff;
+    border-top: 4.8px solid #95dce0;
+    width: 100%;
+    padding: 1.5%;
+    padding-bottom: 2%;
+    margin-right: 1%;
+    margin-left: 2%;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all .3s ease;
+    transition: transform 250ms;
+}
+
+.fila2 .container {
+    background-color: #fff;
+    border-top: 4.8px solid #95dce0;
+    width: 100%;
+    padding: 1.5%;
+    padding-bottom: 4.5%;
+    margin-right: 1%;
+    margin-left: 2%;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 250ms;
+}
+
+.fila1 .container:hover,
+.fila2 .container:hover {
+    transform: translateY(-5px);
+}
+
+.container a {
+    text-decoration: none;
+}
+
+.icon {
+    display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.contenido_1 {
-    border: 1px solid black;
-    width: 20%;
-    padding: 2%;
-    margin-right: 5%;
-    margin-left: 5%;
+    /*border: 1px solid yellow;*/
 
 }
 
+.font-weight-bold {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border: 1px solid purple;*/
+    margin-top: 15px;
+    font-size: 1.0625rem;
+    color: #000;
+}
+
+.descripcion {
+    margin-top: 30px;
+    /*border: 1px solid blue;*/
+    font-size: 1.0625rem;
+    line-height : 25px;
+    color: #506690!important;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 50px;
+    margin-top: auto;
+    background-color: black;
+    
+}
+
+footer h2 {
+    margin-left: 17%;
+    font-family: -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+    color: #fff;
+    font-size: 1em;
+}
+
+/* DROPDOWN FOR MOBILE */
+
+input {
+    display: none;
+    
+  }
+  
+.open {
+    background-color: #fff;
+    width: 24px;
+    height: 4px;
+    display: block;
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+    top: 8px;
+  }
+  
+  .open:before {
+    content: "";
+    background-color: #fff;
+    width: 24px;
+    height: 4px;
+    display: block;
+    border-radius: 2px;
+    position: relative;
+    top: -8px;
+    transform: rotate(0deg);
+    transition: all 0.3s ease;
+    
+  }
+  
+  .open:after {
+    content: "";
+    background-color: #fff;
+    width: 24px;
+    height: 4px;
+    display: block;
+    border-radius: 2px;
+    position: relative;
+    top: 4px;
+    transform: rotate(0deg);
+    transition: all 0.3s ease;
+    
+  }
+  
+  .menuOpen {
+    width: 24px;
+    height: 20px;
+    padding: 15px;
+    cursor: pointer;
+    float: right;
+    /*border: 1px solid green;*/
+    position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    top: 15%;
+    left: -190%;
+    display: none;
+  }
+  
+  .menuOpen:hover .open:before {
+    top: -9px;
+  }
+  
+  .menuOpen:hover .open:after {
+    top: 5px;
+  }
+  
+  .menus {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #95dce0;
+    
+  }
+  
+  .menus label {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-size: 100%;
+    cursor: pointer;
+    
+  }
+  
+  .menus .menuContent {
+    position: relative;
+    top: 35%;
+    font-size: 54px;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-top: -170px;
+    
+  }
+  
+  .menus ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .menus ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-family: Trebuchet MS;
+    text-transform: uppercase;
+    padding: 10px 0;
+    
+  }
+  
+  .menus ul li a:hover {
+    color: #ff8702;
+  }
+  
+  .menus ul li:hover {
+    background: white;
+    
+  }
+  
+  .menuEffects {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+    
+  }
+  
+  .menuEffects ul {
+    transform: translateY(0%);
+    transition: all 0.5s;
+    
+  }
+  
+  #menuToggle:checked ~ .menuEffects {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s;
+  }
+  
+  #menuToggle:checked ~ .menuEffects ul {
+    opacity: 1;
+  }
+  
+  #menuToggle:checked ~ .menuOpen .open {
+    background-color: transparent;
+  }
+  
+  #menuToggle:checked ~ .menuOpen .open:before {
+    content: "";
+    background-color: white;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
+  
+  #menuToggle:checked ~ .menuOpen .open:after {
+    content: "";
+    background-color: white;
+    transform: rotate(-45deg);
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
+  
+  #menuToggle:not(:checked) ~ .menuEffects ul {
+    transform: translateY(-30%);
+  }
+  
+/* BRILLO WEB MOON AND SUN */
+
+.claro{ 
+    background-color: #949494; 
+    color: #f1eded;
+    transition: all 0.3s ease-in-out;
+}
+
+.oculto2 {
+    width: 0;
+    height: 0;
+    border-top: 26.95em solid #949494;
+    border-right: 25px solid transparent;
+    position: absolute;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.moon {
+  position: relative;
+  z-index: 100000;
+  background-color: #d68912;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 1em;
+  transition: all 0.3s ease-in-out;
+}
+
+.moon:hover {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  
+}
+
+
+#hybrid {
+	visibility: hidden;
+}
+
+#theme-toggle {
+	visibility: hidden;
+  
+}
+
+#theme-toggle + label {
+	content: '';
+	display: inline-block;
+	cursor: pointer;
+	height: 33px;
+	width: 33px;
+	border-radius: 50%;
+	transition: all 0.3s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+:not(:checked)
+#theme-toggle:checked + label {
+	background-color: #ffd700;
+}
+
+#theme-toggle:not(:checked) + label {
+	background-color: transparent;
+	box-shadow: inset -7px -5px 1px 1px rgb(255, 255, 255);
+}
+
+/* ARROW UP */
+
+.botones {
+  position: fixed;
+  top: 82%;
+  left: 95%;
+}
+
+#topBtn{
+  font-size: 22px;
+  width: 50px;
+  height: 50px;
+  background-color: #d68912;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+#topBtn:hover {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  
+}
+
+/* PARA SELECCIONAR CON EL CURSOR */
+
+::selection {
+  color: #fff;
+  background: #95dce0;
+}
+
+/* PARA CONFIGURAR LOS ESTILOS DEL SCROLL */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 5px;  
+  
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #95dce0;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #d1fafd; 
+}
