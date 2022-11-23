@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>MJ Computing</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/about.css" media="screen">
+    <!--<link rel="stylesheet" type="text/css" href="css/media.css" media="screen">-->
+    <link rel="stylesheet" type="text/css" href="css/media_formulari.css" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="/css/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+	<link rel="shortcut icon" href="/img/logo.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <header>
+            <a href="index.html" class="logoo"><img class="logo" alt="logo" src="/img/logo.png" style="width: 80px; height: 80px;"></a>
+            <ul class="submenu">
+                <li><a href="index.html"><strong>Inicio</strong></a></li>
+                <li class="submenu1"><a href="#"><strong>Servicios &dtrif;</strong></a>
+                    <ul class="submenu2">
+                        <li><a href="#">Centro de competencias</a></li>
+                        <li><a href="#">Casos de uso</a></li>
+                        <li><a href="#">Experiencias</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html"><strong>About</strong></a></li>
+                <li class="contacto"><a href="formulari.html"><strong>Contacto</strong></a></li>
+            </ul>
+            <div id="menuArea">
+                <input type="checkbox" id="menuToggle">
+            
+                <label for="menuToggle" class="menuOpen">
+                    <span class="open"></span>
+                </label>
+            
+                <div class="menus menuEffects">
+                    <label for="menuToggle"></label>
+                    <div class="menuContent">
+                        <ul>
+                            <li><a href="#">MENU 1</a></li>
+                            <li><a href="#">MENU 2</a></li>
+                            <li><a href="#">MENU 3</a></li>
+                            <li><a href="#">MENU 4</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="bannerr"></div>
+        <script>
+            window.addEventListener("scroll", function(){
+                var header = document.querySelector("header");
+                header.classList.toggle("sticky", window.scrollY > 0);
+            })
+        </script>
+
+        <div class="portada" style="background-image: url(https://www.grupo-pinero.com/wgpcontent/image/wgp/1418254232544/sobre-nosotros.jpg);">
+            <div class="titulo_about"><h1>Sobre Nosotros.</h1></div>
+        </div>
+
+        <div class = "container_about">
+            <div id="texto">
+                <h1>Nuestra especialización</h1><br>
+                <p>Creada en 2022, somos una empresa dedicada a auditar la seguridad de las
+                    empresas, especializada en Red Team. <br><br><br>
+                </p>
+                <p>Por otro lado también tenemos un equipo de expertos especializados en Blue Team 
+                    y securización de Infraestructiras críticas. Contrata ya nuestros servicios para securizar al 100% todos los sistemas informáticos de tu empresa. 
+                    Estamos ubicados en Tarragona y nos pueden contactar mediante el formulario 
+                    facilitado en el apartado de Contacto. Esperamos que cuente con nostros en un futuro.<br><br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h2 style="color: #fff;">© 2022 MJ Computing</h2>
+        <div class="botones">
+            <div class="moon">
+                <input type="checkbox" id="theme-toggle" onclick="cambiarModo()">
+                <label for="theme-toggle"></label>
+            </div>
+            <div id="topBtn"><p><img src="/img/up.png" alt="up" style="position: absolute; top: 78%; left: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px;"></p></div>
+        </div>   
+    </footer>
+
+    <script> 
+        function cambiarModo() { 
+        var cuerpoweb = document.body; 
+        cuerpoweb.classList.toggle("claro");
+        $('.oculto').toggleClass('oculto2');
+        $('.image_ini').toggleClass('image_ini2');
+        //var oculto = document.getElementById('oculto').style.borderBlockColor = ("#949494");
+        }
+    </script>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/script2.js"></script>
+
+</body>
+</html>

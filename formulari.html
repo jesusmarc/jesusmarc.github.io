@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>MJ Computing</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/formulari.css" media="screen">
+    <!--<link rel="stylesheet" type="text/css" href="css/media.css" media="screen">-->
+    <link rel="stylesheet" type="text/css" href="css/media_formulari.css" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="/css/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+	<link rel="shortcut icon" href="/img/logo.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <content class="contenedor">
+        <header>
+            <a href="index.html" class="logoo"><img class="logo" alt="logo" src="/img/logo.png" style="width: 80px; height: 80px;"></a>
+            <ul class="submenu">
+                <li><a href="index.html"><strong>Inicio</strong></a></li>
+                <li class="submenu1"><a href="#"><strong>Servicios &dtrif;</strong></a>
+                    <ul class="submenu2">
+                        <li><a href="#">Centro de competencias</a></li>
+                        <li><a href="#">Casos de uso</a></li>
+                        <li><a href="#">Experiencias</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html"><strong>About</strong></a></li>
+                <li class="contacto"><a href="#"><strong>Contacto</strong></a></li>
+            </ul>
+            <div id="menuArea">
+                <input type="checkbox" id="menuToggle">
+            
+                <label for="menuToggle" class="menuOpen">
+                    <span class="open"></span>
+                </label>
+            
+                <div class="menus menuEffects">
+                    <label for="menuToggle"></label>
+                    <div class="menuContent">
+                        <ul>
+                            <li><a href="#">MENU 1</a></li>
+                            <li><a href="#">MENU 2</a></li>
+                            <li><a href="#">MENU 3</a></li>
+                            <li><a href="#">MENU 4</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="bannerr"></div>
+        <script>
+            window.addEventListener("scroll", function(){
+                var header = document.querySelector("header");
+                header.classList.toggle("sticky", window.scrollY > 0);
+            })
+        </script>
+
+    <!-- CABECERA -->
+    
+        <div class="portada" style="background-image: url(https://es.scassi.com/images/contact/bandeau_contact.jpg);">
+            <div class="titulo_"><h1>Estamos aquí para escucharte.</h1></div>
+
+        </div>
+        <div class="info">
+            <div class="colum1">
+                <div class="roww">
+                    <h6>Póngase en contacto con nosotros</h6>
+                </div>
+                <div><p>Avenida Reina, Victoria 31 1ºA, Madrid (28003) - España</p></div>
+            </div>
+            <div class="colum2">
+                <div class="roww">
+                    <h6>Llámenos</h6>
+                </div>
+                <div><p>977 888 222</p></div>
+            </div>
+            <div class="colum3">
+                <div class="roww">
+                    <h6>Envíenos un correo electrónico</h6>
+                </div>
+                <div><p>jesusmarc@gmail.com</p></div>
+            </div>
+        </div>
+
+    <!-- CUERPO -->
+        
+        <form class="form1" action="registro.php" method="post"> <!-- Inicio de etiqueta form -->
+            <div class="div_contenedor"> <!-- Contenedor div -->
+                <div class="contenedor_divs12">
+                    <div class="div1">
+                        <label>Nombre:</label><br>
+                        <input type="text" name="nombre" maxlength="999" value="" placeholder="Su nombre"> 
+                        <br>
+                        <label>Apellido:</label><br>
+                        <input type="text" name="apellidos" value="" placeholder="Su apellido"> 
+                        <br>
+                        <label>Email:</label><br>
+                        <input type="text" name="Email" value="" maxlength="20" placeholder="Su Email">
+                        <br>
+                    </div>
+                    <div class="div2">
+                        <label>Empresa:</label><br>
+                        <input type="text" name="Empresa" value="" maxlength="20" placeholder="Su empresa">
+                        <br>
+                        <label>Teléfono:</label><br>
+                        <input type="text" name="Telefono" value="" maxlength="9" placeholder="Su telefono">
+                        <br>
+                        <label>Asunto:</label><br>
+                        <input type="text" name="Asunto" value="" placeholder="Coloque un asunto">
+                        <br>
+                    </div>
+                </div>
+                <div class="contenedor_div3">
+                    <div class="div3">
+                        <label for="descripcion">¿En qué podemos ayudarle?</label> 
+                        <br> 
+                        <textarea id="descripcion" name="descripcion" cols="40" rows="5" placeholder="Déjenos su mensaje..."></textarea>
+                    </div>
+                    <input class="boton" type="button" name="guardar" value="Enviar" > <!-- Boton de tipo button para efectuar cambios -->
+                </div>
+            </div>
+        </form>
+    </content>
+    
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        <h2 style="color: #fff;">© 2022 MJ Computing</h2>
+        <div class="botones">
+            <div class="moon">
+                <input type="checkbox" id="theme-toggle" onclick="cambiarModo()">
+                <label for="theme-toggle"></label>
+            </div>
+            <div id="topBtn"><p><img src="/img/up.png" alt="up" style="position: absolute; top: 78%; left: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px;"></p></div>
+        </div>   
+    </footer>
+
+    <script> 
+        function cambiarModo() { 
+          var cuerpoweb = document.body; 
+          cuerpoweb.classList.toggle("claro");
+          $('.triangulo1').toggleClass('triangulo4');
+          $('.triangulo2').toggleClass('triangulo3');
+          $('.colum1').toggleClass('colum1white');
+          $('.colum3').toggleClass('colum3white');
+          $('.info').toggleClass('infowhite');
+          $('header').toggleClass('header2');
+          //var oculto = document.getElementById('oculto').style.borderBlockColor = ("#949494");
+        }
+    </script>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/script2.js"></script>
+</body>
+
+</html>

@@ -64,7 +64,6 @@ header ul {
     display: flex;
     justify-content: right;
     align-items: right;
-    /*bordeR: 1px solid yellow;*/
     width: 85%;
 
 }
@@ -73,7 +72,6 @@ header ul li {
     position: relative;
     list-style: none;
     padding-top: 30px;
-    cursor: pointer;
 }
 
 header ul li a {
@@ -87,8 +85,12 @@ header ul li a {
     transition: all .2s ease-in-out;
 }
 
-header ul li:hover > a {
-    color: #95dce0;
+header ul li a:hover {
+  color: #95dce0;
+}
+
+header ul .contacto:hover {
+  cursor: default;
 }
 
 header ul li ul a {
@@ -115,6 +117,25 @@ header.sticky ul li ul {
 header.sticky ul li a:hover{
     color: #95dce0;
 }
+
+.contacto a {
+  background: #95dce0;
+  padding: 10%;
+  border-radius: 7px;
+}
+
+.contacto a:hover{
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  transition: 0.5s;
+}
+
+header.sticky .contacto a:hover {
+  background: rgba(202, 202, 202, 0.911);
+  color: #fff;
+  transition: 0.5s;
+}
+
 
 
 /* ESTILOS DROPDOWN (SUBMENU) MENU */
@@ -153,7 +174,11 @@ header.sticky ul li a:hover{
     margin: 0;
     z-index: 1;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-} 
+}
+
+.submenu1:hover > a {
+  color: #95dce0;
+}
 
 /* CABECERA */
 
@@ -163,7 +188,18 @@ header.sticky ul li a:hover{
     display: flex;
     padding: 1%;
     padding-top: 2%;
+    transition: all .2s ease-in-out;
 }
+
+.image_ini2 {
+  border-bottom: 1px solid #fff;
+  height: 430px;
+  display: flex;
+  padding: 1%;
+  padding-top: 2%;
+  transition: all .2s ease-in-out;
+}
+
 
 .banner {
     width: 52%;
@@ -347,8 +383,8 @@ slider .Selectores > div.Activo {background-color: #95dce0;}
     overflow: hidden;
     border-radius: 8px;
     cursor: pointer;
-    transition: all .3s ease;
-    transition: transform 250ms;
+    transition: all 0.3s ease-in-out;
+    box-shadow: .17rem .17rem .17rem black;
 }
 
 .fila2 .container {
@@ -362,12 +398,15 @@ slider .Selectores > div.Activo {background-color: #95dce0;}
     overflow: hidden;
     border-radius: 8px;
     cursor: pointer;
-    transition: transform 250ms;
+    box-shadow: .17rem .17rem .17rem black;
+    transition: all 0.3s ease-in-out;
 }
 
 .fila1 .container:hover,
 .fila2 .container:hover {
     transform: translateY(-5px);
+    box-shadow: 0px 16px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
 }
 
 .container a {
@@ -418,7 +457,7 @@ footer h2 {
 
 /* DROPDOWN FOR MOBILE */
 
-input {
+#menuArea input {
     display: none;
     
   }
@@ -625,8 +664,8 @@ input {
 }
 
 .moon:hover {
-  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-  
+  background: rgba(131, 131, 131);
+  transition: 0.5s;
 }
 
 
@@ -684,8 +723,8 @@ input {
 }
 
 #topBtn:hover {
-  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-  
+  background: rgba(131, 131, 131);
+  transition: 0.5s;
 }
 
 /* PARA SELECCIONAR CON EL CURSOR */

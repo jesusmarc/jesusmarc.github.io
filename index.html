@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<title>El primer documento HTML</title>
+	<title>MJ Computing</title>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="/css/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
-	<!--<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">-->
-    
+	<link rel="shortcut icon" href="/img/logo.ico" type="image/x-icon">   
 </head>
 
 <body>
@@ -21,7 +20,6 @@
             <a href="#" class="logoo"><img class="logo" alt="logo" src="/img/logo.png" style="width: 80px; height: 80px;"></a>
             <ul class="submenu">
                 <li><a href="#"><strong>Inicio</strong></a></li>
-                <li><a href="#"><strong>Sectores de Actividad</strong></a></li>
                 <li class="submenu1"><a href="#"><strong>Servicios &dtrif;</strong></a>
                     <ul class="submenu2">
                         <li><a href="#">Centro de competencias</a></li>
@@ -29,8 +27,8 @@
                         <li><a href="#">Experiencias</a></li>
                     </ul>
                 </li>
-                <li><a href="#"><strong>Contacto</strong></a></li>
-                <li><a href="#"><strong>About</strong></a></li>
+                <li><a href="about.html"><strong>About</strong></a></li>
+                <li class="contacto"><a href="formulari.html"><strong>Contacto</strong></a></li>
             </ul>
             <div id="menuArea">
                 <input type="checkbox" id="menuToggle">
@@ -62,7 +60,7 @@
 
     <!-- CABECERA -->
         
-       <content class="image_ini">
+       <div class="image_ini">
             <div class="banner">
                 <div class="contenedor_banner">
                     <div class="recuadro">
@@ -97,7 +95,7 @@
                     <content><img src="/img/img3.jpg" alt="img3" style="width: 100%; height: 100%;"></content>
                 </slider>
             </slider>
-        </content>
+        </div>
 
     <!-- CUERPO -->
         
@@ -137,7 +135,7 @@
                         <h4 class="font-weight-bold">ePayment, banca y seguros</h4>
                         <div class="descripcion">
                             <p>
-                                Como laboratorio certificado por Paycert, apoyamos a los actores del sector en su cumplimiento de la ciberseguridad en los SI bancarios y financieros. SCASSI es un laboratorio certificado por Paycert para certificar los sistemas de pago electrónico y luchar contra el fraude masivo a través de los medios de pago con tarjeta bancaria.
+                                Como laboratorio certificado por Paycert, apoyamos a los actores del sector en su cumplimiento de la ciberseguridad en los SI bancarios y financieros. M_J es un laboratorio certificado por Paycert para certificar los sistemas de pago electrónico y luchar contra el fraude masivo a través de los medios de pago con tarjeta bancaria.
                             </p>
                         </div>
                     </a>
@@ -206,6 +204,7 @@
           var cuerpoweb = document.body; 
           cuerpoweb.classList.toggle("claro");
           $('.oculto').toggleClass('oculto2');
+          $('.image_ini').toggleClass('image_ini2');
           //var oculto = document.getElementById('oculto').style.borderBlockColor = ("#949494");
         }
     </script>
