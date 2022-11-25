@@ -10,7 +10,7 @@ html {
 
 body {
     background-color: #050d1a;
-    margin-top: 5%;
+    margin-top: 8%;
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -756,4 +756,83 @@ footer h2 {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #d1fafd; 
+}
+
+
+.part_1 {
+    width: 60%;
+    margin-bottom: 5%;
+}
+
+.part_1 h1 {
+    color: #fff;
+}
+
+.part_1 p {
+    color: #fff;
+    width: 50%;
+    text-align: justify;
+}
+
+.part_2 {
+    width: 60%;
+    margin-bottom: 5%;
+}
+
+.part_2 h1 {
+    color: #fff;
+    float: right;
+}
+
+.part_2 p {
+    color: #fff;
+    width: 50%;
+    float: right;
+    text-align: justify;
+}
+
+.part_3 {
+    width: 60%;
+    margin-bottom: 5%;
+}
+
+.part_3 h1 {
+    color: #fff;
+}
+
+.part_3 p {
+    color: #fff;
+    width: 50%;
+    text-align: justify;
+}
+
+.parts {
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.parts p {
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.parts h1 {
+    margin-bottom: 4%;
+}
+
+.parts img {
+    width: 43%;
+    height: 35vh;
+    border-radius: 10px;  
+}
+
+.part_1 img, .part_3 img {
+    float: right;
+}
+
+.part_2 img {
+    float: left;
 }

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>MJ Computing</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/css/post.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/css/media_posts.css" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="/css/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+	<link rel="shortcut icon" href="/img/logo.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="contenedor">
+        <header>
+            <a href="/index.html" class="logoo"><img class="logo" alt="logo" src="/img/logo.png" style="width: 80px; height: 80px;"></a>
+            <ul class="submenu">
+                <li><a href="/index.html"><strong>Inicio</strong></a></li>
+                <li class="submenu1"><a href="#"><strong>Servicios &dtrif;</strong></a>
+                    <ul class="submenu2">
+                        <li><a href="/posts/post_1.html">Defensa y espacio</a></li>
+                        <li><a href="/posts/post_2.html">Transporte y movilidad aérea</a></li>
+                        <li><a href="/posts/post_3.html">Banca y seguros</a></li>
+                        <li><a href="/posts/post_4.html">Salud</a></li>
+                        <li><a href="/posts/post_5.html">Automovie</a></li>
+                        <li><a href="/posts/post_6.html">Industria</a></li>
+                    </ul>
+                </li>
+                <li><a href="/about.html"><strong>About</strong></a></li>
+                <li class="contacto"><a href="/formulari.html"><strong>Contacto</strong></a></li>
+            </ul>
+            <div id="menuArea">
+                <input type="checkbox" id="menuToggle">
+            
+                <label for="menuToggle" class="menuOpen">
+                    <span class="open"></span>
+                </label>
+            
+                <div class="menus menuEffects">
+                    <label for="menuToggle"></label>
+                    <div class="menuContent">
+                        <ul>
+                            <li><a href="#">MENU 1</a></li>
+                            <li><a href="#">MENU 2</a></li>
+                            <li><a href="#">MENU 3</a></li>
+                            <li><a href="#">MENU 4</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="bannerr"></div>
+        <script>
+            window.addEventListener("scroll", function(){
+                var header = document.querySelector("header");
+                header.classList.toggle("sticky", window.scrollY > 0);
+            })
+        </script>
+        <div class="parts">
+            <div class="part_1">
+                <div>
+                    <h1>Industria</h1>
+                </div>
+                <div>
+                    <img src="/img/img18.jpg">
+                    <p>El desarrollo de la Industria 4.0 se caracteriza por la convergencia TI y TO. La interdependencia de los sistemas crea brechas de seguridad y riesgos en el funcionamiento de los sitios industriales (parada de la producción, pérdida de datos, modificación de configuraciones, deterioro del rendimiento, etc.).</p><br>
+                    <p>El problema se amplifica para aquellas empresas industriales donde coexisten equipamientos industriales de diferentes generaciones, sobre los que es difícil aplicar un conjunto de reglas homogéneas de seguridad. Ciertos equipos no disponen de ningún sistema de gestión de acceso o simplemente están equipados con sistemas de protección perimetral obsoletos.</p><br>
+                </div>
+            </div>
+            <div class="part_2">
+                <div>
+                    <h1>Algunos ejemplos de proyectos realizados por los expertos de MJ_COMPUTING</h1>
+                </div>
+                <div>
+                    <img src="/img/img19.jpg">
+                    <p>
+                        Ciber-ejercicios de simulación de adversarios sobre infraestructuras críticas.<br><br>
+
+                        Despliegue de soluciones honeynet en entornos de producción industrial.<br><br>
+                    </p>
+                </div>
+            </div>
+            <div class="part_3">
+                <div>
+                    <h1>Algunos ejemplos de proyectos realizados por los expertos de MJ_COMPUTING</h1>
+                </div>
+                <div>
+                    <img src="/img/img20.jpg">
+                    <p>
+                        Auditorías de ciberresiliencia y continuidad de la actividad.<br><br>
+
+                        Análisis forense de entornos industriales.<br><br>
+                        
+                        Análisis de riesgo desde el punto de vista de la disponibilidad del servicio esencial.<br><br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h2 style="color: #fff;">© 2022 MJ Computing</h2>
+        <div class="botones">
+            <div class="moon">
+                <input type="checkbox" id="theme-toggle" onclick="cambiarModo()">
+                <label for="theme-toggle"></label>
+            </div>
+            <div id="topBtn"><p><img src="/img/up.png" alt="up" style="position: absolute; top: 78%; left: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px;"></p></div>
+        </div>   
+    </footer>
+
+    <script> 
+        function cambiarModo() { 
+        var cuerpoweb = document.body; 
+        cuerpoweb.classList.toggle("claro");
+        $('.oculto').toggleClass('oculto2');
+        $('.image_ini').toggleClass('image_ini2');
+        $('header').toggleClass('header2');
+        //var oculto = document.getElementById('oculto').style.borderBlockColor = ("#949494");
+        }
+    </script>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/script2.js"></script>
+
+</body>
+</html>
