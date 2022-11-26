@@ -549,7 +549,7 @@ footer h2 {
   .menus .menuContent {
     position: relative;
     top: 35%;
-    font-size: 54px;
+    font-size: 30px;
     text-align: center;
     padding-bottom: 20px;
     margin-top: -170px;
@@ -633,7 +633,11 @@ footer h2 {
   #menuToggle:not(:checked) ~ .menuEffects ul {
     transform: translateY(-30%);
   }
-  
+
+  .menuContent .submenu2_movil li a {
+    color:#000;
+  }
+
 /* BRILLO WEB MOON AND SUN */
 
 .claro{ 
@@ -701,6 +705,7 @@ footer h2 {
 	background-color: transparent;
 	box-shadow: inset -7px -5px 1px 1px rgb(255, 255, 255);
 }
+
 
 /* ARROW UP */
 
