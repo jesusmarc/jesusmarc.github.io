@@ -459,7 +459,7 @@ footer h2 {
 
 #menuArea input {
     display: none;
-    
+
   }
   
 .open {
@@ -532,7 +532,7 @@ footer h2 {
     top: 0;
     left: 0;
     background: #95dce0;
-    
+    overflow: auto;
   }
   
   .menus label {
@@ -549,7 +549,7 @@ footer h2 {
   .menus .menuContent {
     position: relative;
     top: 35%;
-    font-size: 54px;
+    font-size: 30px;
     text-align: center;
     padding-bottom: 20px;
     margin-top: -170px;
@@ -580,7 +580,6 @@ footer h2 {
   
   .menus ul li:hover {
     background: white;
-    
   }
   
   .menuEffects {
@@ -633,6 +632,11 @@ footer h2 {
   #menuToggle:not(:checked) ~ .menuEffects ul {
     transform: translateY(-30%);
   }
+
+  .menuContent .submenu2_movil li a {
+    color:#000;
+  }
+
   
 /* BRILLO WEB MOON AND SUN */
 
