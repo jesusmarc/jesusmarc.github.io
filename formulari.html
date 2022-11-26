@@ -46,14 +46,22 @@
                     <label for="menuToggle"></label>
                     <div class="menuContent">
                         <ul>
-                            <li><a href="#">MENU 1</a></li>
-                            <li><a href="#">MENU 2</a></li>
-                            <li><a href="#">MENU 3</a></li>
-                            <li><a href="#">MENU 4</a></li>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li class="submenu1_movil"><a href="#" class="action">Servicios &dtrif;</a>
+                                <ul class="submenu2_movil">
+                                    <li><a href="/posts/post_1.html">Defensa y espacio</a></li>
+                                    <li><a href="/posts/post_2.html">Transporte y movilidad aérea</a></li>
+                                    <li><a href="/posts/post_3.html">Banca y seguros</a></li>
+                                    <li><a href="/posts/post_4.html">Salud</a></li>
+                                    <li><a href="/posts/post_5.html">Automovie</a></li>
+                                    <li><a href="/posts/post_6.html">Industria</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="formulari.html">Contacto</a></li>
                         </ul>
                     </div>
                 </div>
-            </div>
         </header>
         <div class="bannerr"></div>
         <script>
@@ -61,6 +69,19 @@
                 var header = document.querySelector("header");
                 header.classList.toggle("sticky", window.scrollY > 0);
             })
+        </script>
+        <script>
+            var nav = $('.menuContent > ul > .submenu1_movil');
+            nav.find('li').hide();
+            nav.click(function () {
+                nav.not(this).find('li').hide();
+                $(this).find('li').slideToggle();
+            });
+            $(function() {  
+                $('#menu input').click(function () { 
+                $('.menuContent ul').slideToggle() 
+            });
+                });
         </script>
 
     <!-- CABECERA -->
