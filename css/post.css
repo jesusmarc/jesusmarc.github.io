@@ -56,14 +56,13 @@ header .logoo {
     letter-spacing: 2px;
     transition: 0.4s;
     justify-content: left;
-    align-items: left;
+    
 }
 
 header ul {
     position: relative;
     display: flex;
     justify-content: right;
-    align-items: right;
     width: 85%;
 
 }
@@ -80,7 +79,7 @@ header ul li a {
     text-decoration: none;
     color: #fff;
     letter-spacing: 2px;
-    font-weight: 500px;
+    font-weight: 500;
     font-family: 'Arial';
     transition: all .2s ease-in-out;
 }
@@ -210,7 +209,6 @@ header.sticky .contacto a:hover {
     height: auto;
     margin-left: 17%;
     margin-top: 9%;
-    word-wrap: word-break;
 }
 
 .recuadro h1 {
@@ -228,7 +226,6 @@ header.sticky .contacto a:hover {
     height: auto;
     margin-left: 17%;
     margin-top: 2%;
-    word-wrap: word-break;
     animation: 8s anim-lineUp ease-out;
     font-family: sans-serif;
 }
@@ -242,7 +239,6 @@ header.sticky .contacto a:hover {
     width: 70%;
     margin-top: 3.5%;
     margin-left: 17%;
-    word-wrap: word-break;
 }
 
 .btn {
@@ -511,7 +507,6 @@ footer h2 {
     position: relative;
     display: flex;
     justify-content: right;
-    align-items: right;
     top: 15%;
     left: -190%;
     display: none;
