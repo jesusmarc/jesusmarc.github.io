@@ -4,6 +4,8 @@
 	<title>MJ Computing</title>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index">
+    <meta name="description" content="Empresa dedicada al sector de la Ciberseguridad, si quieres saber más información, puedes contactar con nosotros.">
 	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
     <link rel="stylesheet" type="text/css" href="css/formulari.css" media="screen">
     <!--<link rel="stylesheet" type="text/css" href="css/media.css" media="screen">-->
@@ -84,8 +86,8 @@
                 });
         </script>
 
-    <!-- CABECERA -->
-    
+        <!-- CABECERA -->
+        
         <div class="portada" style="background-image: url(https://es.scassi.com/images/contact/bandeau_contact.jpg);">
             <div class="titulo_"><h1>Estamos aquí para escucharte.</h1></div>
         </div>
@@ -110,44 +112,49 @@
             </div>
         </div>
 
-    <!-- CUERPO -->
-        
-        <form class="form1" action="registro.php" method="post"> <!-- Inicio de etiqueta form -->
-            <div class="div_contenedor"> <!-- Contenedor div -->
-                <div class="contenedor_divs12">
-                    <div class="div1">
-                        <label>Nombre:</label><br>
-                        <input type="text" name="nombre" maxlength="999" value="" placeholder="Su nombre"> 
-                        <br>
-                        <label>Apellido:</label><br>
-                        <input type="text" name="apellidos" value="" placeholder="Su apellido"> 
-                        <br>
-                        <label>Email:</label><br>
-                        <input type="text" name="Email" value="" maxlength="20" placeholder="Su Email">
-                        <br>
+        <!-- CUERPO -->
+        <main>
+            <form class="form1" action="registro.php" method="post"> <!-- Inicio de etiqueta form -->
+                <div class="div_contenedor"> <!-- Contenedor div -->
+                    <div class="contenedor_divs12">
+                        <div class="div1">
+                            <label>Nombre:</label><br>
+                            <input type="text" name="nombre" maxlength="999" value="" placeholder="Su nombre"> 
+                            <br>
+                            <label>Apellido:</label><br>
+                            <input type="text" name="apellidos" value="" placeholder="Su apellido"> 
+                            <br>
+                            <label>Email:</label><br>
+                            <input type="text" name="Email" value="" maxlength="20" placeholder="Su Email">
+                            <br>
+                        </div>
+                        <div class="div2">
+                            <label>Empresa:</label><br>
+                            <input type="text" name="Empresa" value="" maxlength="20" placeholder="Su empresa">
+                            <br>
+                            <label>Teléfono:</label><br>
+                            <input type="text" name="Telefono" value="" maxlength="9" placeholder="Su telefono">
+                            <br>
+                            <label>Asunto:</label><br>
+                            <input type="text" name="Asunto" value="" placeholder="Coloque un asunto">
+                            <br>
+                        </div>
                     </div>
-                    <div class="div2">
-                        <label>Empresa:</label><br>
-                        <input type="text" name="Empresa" value="" maxlength="20" placeholder="Su empresa">
-                        <br>
-                        <label>Teléfono:</label><br>
-                        <input type="text" name="Telefono" value="" maxlength="9" placeholder="Su telefono">
-                        <br>
-                        <label>Asunto:</label><br>
-                        <input type="text" name="Asunto" value="" placeholder="Coloque un asunto">
-                        <br>
+                    <div class="contenedor_div3">
+                        <div class="div3">
+                            <label for="descripcion">¿En qué podemos ayudarle?</label> 
+                            <br> 
+                            <textarea id="descripcion" name="descripcion" cols="40" rows="5" placeholder="Déjenos su mensaje..."></textarea>
+                        </div>
+                        <div id="terminos_condiciones">
+                            <label>He leído y acepto los términos y condiciones y la <a href="pdf/Politica_privacidad.pdf">Política de privacidad</a>.</label>
+                            <input type="checkbox" name="terminos" value="Acepto" required><br> 
+                        </div>
+                        <input class="boton" type="submit" name="guardar" value="Enviar" > <!-- Boton de tipo button para efectuar cambios -->
                     </div>
                 </div>
-                <div class="contenedor_div3">
-                    <div class="div3">
-                        <label for="descripcion">¿En qué podemos ayudarle?</label> 
-                        <br> 
-                        <textarea id="descripcion" name="descripcion" cols="40" rows="5" placeholder="Déjenos su mensaje..."></textarea>
-                    </div>
-                    <input class="boton" type="button" name="guardar" value="Enviar" > <!-- Boton de tipo button para efectuar cambios -->
-                </div>
-            </div>
-        </form>
+            </form>
+        </main>
     </div>
     
 
